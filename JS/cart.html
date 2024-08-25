@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="shop">장바구니 페이지</div>
+
+    <script>
+      var cartItem = JSON.parse(localStorage.getItem("cart"));
+
+      for (let i = 0; i < cartItem.length; i++) {
+        var item = `<p>${cartItem[i]}</p>`;
+        $(".shop").append(item);
+      }
+    </script>
+  </body>
+</html>
